@@ -1,5 +1,5 @@
 # Task Manager JS
-
+212022
 ## Descripción
 
 Este proyecto es una aplicación simple de gestión de tareas creada con HTML, CSS y JavaScript. El objetivo de este proyecto es que los estudiantes practiquen conceptos básicos de programación en JavaScript como variables, condicionales, ciclos, arreglos, funciones y JSON, además de aprender a usar Git y GitHub para versionar su código.
