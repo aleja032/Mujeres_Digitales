@@ -1,0 +1,82 @@
+[
+    {   "id": 1,
+        "nombre": "Chasis Mid Tower RGB",
+        "categoria": "Chasis (Torres/Carcasas)",
+        "seccion": "Económico",
+        "descripcion": {
+            "Tamaño": "Mid Tower",
+            "Material": "Acero y vidrio templado",
+            "Flujo de Aire": "Diseño optimizado con soporte optimizado de alta calidad para 6 ventiladores",
+            "Soporte de GPU": "Hasta 400 mm de longitud",
+            "Almacenamiento": "2x SSD, 2x HDD",
+            "Conectividad Frontal": "2x USB 3.0, 1x USB-C, Audio HD",
+            "Iluminación RGB": "Sí, con control integrado",
+            "Panel Lateral": "Vidrio templado",
+            "Compatibilidad": "Placas base ATX, Micro-ATX, Mini-ITX",
+            "Gestión de Cables": "Espacio dedicado para una instalación limpia"
+        },
+        "precio": 280.999,
+        "garantia": "2 años",
+        "imagen": "../assets/chasis_black.png"
+    },
+    {   "id": 2,
+        "nombre": "Chasis Full Tower Premium",
+        "categoria": "Chasis (Torres/Carcasas)",
+        "seccion": "Gama Alta",
+        "descripcion": {
+            "Tamaño": "Full Tower",
+            "Material": "Aluminio y vidrio templado",
+            "Flujo de Aire": "Diseño con flujo de aire optimizado, soporte para 8 ventiladores",
+            "Soporte de GPU": "Hasta 450 mm de longitud",
+            "Almacenamiento": "4x SSD, 3x HDD",
+            "Conectividad Frontal": "4x USB 3.0, 1x USB-C, Audio HD",
+            "Iluminación RGB": "Sí, con control remoto",
+            "Panel Lateral": "Vidrio templado con bisagras",
+            "Compatibilidad": "Placas base ATX, Micro-ATX, Mini-ITX, E-ATX",
+            "Gestión de Cables": "Canales dedicados para una gestión óptima"
+        },
+        "precio":100.999,
+        "garantia": "3 años",
+        "imagen": "chasis_black"
+    },
+    {   "id": 3,
+        "nombre": "Chasis Micro ATX Compacto",
+        "categoria": "Chasis (Torres/Carcasas)",
+        "seccion": "Económico",
+        "descripcion": {
+            "Tamaño": "Micro ATX",
+            "Material": "Acero",
+            "Flujo de Aire": "Ventilación optimizada con soporte optimizado para 4 ventiladores",
+            "Soporte de GPU": "Hasta 300 mm de longitud",
+            "Almacenamiento": "1x SSD, 1x HDD",
+            "Conectividad Frontal": "2x USB 2.0, 1x USB 3.0, Audio HD",
+            "Iluminación RGB": "No",
+            "Panel Lateral": "Acero sólido",
+            "Compatibilidad": "Placas base Micro-ATX, Mini-ITX",
+            "Gestión de Cables": "Espacio limitado para gestión básica"
+        },
+        "precio": 299.999,
+        "garantia": "1 año",
+        "imagen": "chasis_white"
+    },
+    {   "id": 4,
+        "nombre": "Chasis Mini ITX Minimalista",
+        "categoria": "Chasis (Torres/Carcasas)",
+        "seccion": "Gama Media",
+        "descripcion": {
+            "Tamaño": "Mini ITX",
+            "Material": "Aluminio",
+            "Flujo de Aire": "Diseño compacto con soporte para 2 ventiladores optimizado de buena calidad",
+            "Soporte de GPU": "Hasta 200 mm de longitud",
+            "Almacenamiento": "1x SSD",
+            "Conectividad Frontal": "1x USB 3.0, 1x USB-C, Audio HD",
+            "Iluminación RGB": "No",
+            "Panel Lateral": "Aluminio sólido",
+            "Compatibilidad": "Placas base Mini-ITX",
+            "Gestión de Cables": "Diseño eficiente para un espacio reducido"
+        },
+        "precio": 79.999,
+        "garantia": "2 años",
+        "imagen": "chasis_black"
+    }
+]
