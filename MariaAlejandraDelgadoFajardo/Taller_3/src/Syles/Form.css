@@ -1,0 +1,21 @@
+.container{
+    height: 99.9vh;
+}
+
+.form{
+    border: 2px solid #F45840;
+    border-radius: 20px;
+    width: 35%;
+    height: 60%;
+}
+.candelita{
+    position: absolute;
+    width: 15%;
+    bottom: 13%;
+    right: 28%;
+}
+input{
+    width: 95%;
+    border-radius: 15px;
+    
+}
