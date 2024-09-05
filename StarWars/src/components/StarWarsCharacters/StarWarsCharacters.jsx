@@ -32,7 +32,8 @@ function StarWarsCharacters() {
             setLoading(true);
             const response = await fetch(pagina);
             const data = await response.json();
-            setCharacters(prevCharacters => [...prevCharacters, ...data.results]); // Agregar los nuevos personajes al array existente
+            setCharacters(data.results);
+            // setCharacters(prevCharacters => [...prevCharacters, ...data.results]); // Agregar los nuevos personajes al array existente
             setHasMore(!!data.next); // Verifica si hay más personajes para cargar
 
             setNextPage(data.next); // Guarda la URL de la siguiente página
@@ -43,30 +44,30 @@ function StarWarsCharacters() {
         }
     };
 
-    // cuando llega al final de la pagina me retorne mas personajes
-    const handleScroll = useCallback(() => {
-        if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 100 && !loading) {
-            if (nextPage) {
-                fetchCharacters(nextPage);
-            }
-        }
-    }, [loading, nextPage]);
+    
+    // const handleScroll = useCallback(() => {
+    //     if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 100 && !loading) {
+    //         if (nextPage) {
+    //             fetchCharacters(nextPage);
+    //         }
+    //     }
+    // }, [loading, nextPage]);
 
-
+    // cargar primeros personajes
     useEffect(() => {
         fetchCharacters(currentPage);
     }, [currentPage]);
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, [handleScroll]);
 
 
     if (error) {
         return <div>Error: {error.message}</div>;
     }
-    
+
     const getCharacterImage = (url) => {
         const id = url.split("/").filter(Boolean).pop();
         return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
