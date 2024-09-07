@@ -6,16 +6,16 @@ import '../Syles/Form.css';
 function Form() {
     const [grados, setGrados] = useState({ fahrenheit: 0, celsius: 0 });
 
-    const convertToCelsius = (fahrenheit) => (fahrenheit - 32) * (5/9);
-    const convertToFahrenheit = (celsius) => celsius * (9 / 5) + 32;
+    const convertToCelsius = (fahrenheit) => ((fahrenheit - 32) * (5/9)).toFixed(0);
+    const convertToFahrenheit = (celsius) => (celsius * (9 / 5) + 32).toFixed(0);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
 
         if (name === "celsius" && value !== "") {
-            const fahrenheit = convertToCelsius(Number(value));
+            const fahrenheit = convertToFahrenheit(Number(value));
             setGrados({ celsius: value, fahrenheit });
-        } else if ( name === "fahrenheit" && value !== 0) {
+        } else if ( name === "fahrenheit" && value !== "") {
             const celsius = convertToCelsius(Number(value));
             setGrados({ fahrenheit: value, celsius });
         } else {
