@@ -1,33 +1,34 @@
 import { useState, useEffect } from "react";
 
-function useFetch(url, trigger) {
+function useFetch(url) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch(url);
+    const fetchData = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(url);
 
-                if (!response.ok) {
-                    throw new Error(`Error: ${response.status} ${response.statusText}`);
-                }
-
-                const result = await response.json();
-                setData(result.slip); 
-
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
             }
-        };
+
+            const result = await response.json();
+            setData(result.slip); 
+
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
         fetchData(); 
-    }, [url, trigger]);
+    }, [url]);
     
-    return { data, loading, error };
+    return { data, loading, error, fetchData };
 }
 
 export default useFetch;

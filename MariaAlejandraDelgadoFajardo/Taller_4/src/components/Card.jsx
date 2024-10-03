@@ -7,8 +7,7 @@ import "../styles/Card.css";
 
 function Card (){
     const [url, setUrl] = useState('https://api.adviceslip.com/advice/71'); 
-    const [fetchCount, setFetchCount] = useState(0);  
-    const { data, loading, error } = useFetch(url, fetchCount);
+    const { data, loading, error, fetchData } = useFetch(url);
     const [isMobile, setIsMobile] = useState(false); 
 
     useEffect(() => {
@@ -19,10 +18,9 @@ function Card (){
         return () => {console.log("cambio"), window.removeEventListener('resize', handleResize); };
     }, []);
     
-
     const handleAdvice = () => {
         setUrl('https://api.adviceslip.com/advice');
-        setFetchCount(prevCount => prevCount + 1); 
+        fetchData();
     };
 
     return( 
