@@ -3,7 +3,7 @@ import useFetch from '../hook/useFetch.js';
 import Dado from '../assets/icon-dice.svg';
 import DividerDesktop from '../assets/pattern-divider-desktop.svg';
 import Dividermobile from '../assets/pattern-divider-mobile.svg';
-import "../Styles/Card.css";
+import "../styles/Card.css";
 
 function Card (){
     const [url, setUrl] = useState('https://api.adviceslip.com/advice/71'); 
